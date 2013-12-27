@@ -20,3 +20,10 @@ class iban(object):
         self.country_code = country_code
         self.account_number = account_number
         self.routing_number = routing_number
+
+    def gen_iban() -> str:
+        if self.country_code == "DE":
+            pass
+        else:
+            print("\nOther countries than 'DE' not yet working.")
+            print("Feel free to distribute on GitHub.\n")
