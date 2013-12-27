@@ -16,5 +16,7 @@ COUNTRIES = ("AD", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", \
 class iban(object):
     '''New instance of iban-class'''
 
-    def __init__(self):
-        pass
+    def __init__(self, country_code, account_number, routing_number):
+        self.country_code = country_code
+        self.account_number = account_number
+        self.routing_number = routing_number
