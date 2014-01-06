@@ -1,0 +1,4 @@
+Some links with further information I used (all german):
+http://www.iban.de/iban-pruefsumme.html
+http://www.pruefziffernberechnung.de/I/IBAN.shtml
+Thanks to them.
