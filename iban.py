@@ -9,6 +9,10 @@ __status__ = "Development"
 COUNTRIES = ("AD", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", \
              "FI", "FR", "GB", "GI", "GR", "HU", "IE", "IS", "IT", "LT", \
              "LU", "LV", "NL", "NO", "PL", "SE", "SI", "SK")
+            # countries that are currently involved in SEPA
+            # 12-30-2013
+            # I got it from here:
+            # http://www.pruefziffernberechnung.de/I/IBAN.shtml
 
 ##############
 # class IBAN #
