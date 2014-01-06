@@ -25,7 +25,7 @@ class Iban(object):
         self.account_number = account_number
         self.routing_number = routing_number
 
-    def gen_iban() -> str:
+    def gen_iban(self) -> str:
         if self.country_code == "DE":
             # I know there are many things that are equal here to other
             # countries. But I decided to only do DE for now.
@@ -54,4 +54,3 @@ class Iban(object):
             print("\nOther countries than 'DE' not yet working.")
             print("Feel free to contribute on GitHub.\n")
 
-            
