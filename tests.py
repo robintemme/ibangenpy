@@ -11,5 +11,11 @@ from iban import Iban
 
 # Iban(country_code, account_number, routing_number)
 my_own_iban = Iban("DE", "123456789", "12345678")
-
+# normal string
 print(my_own_iban.gen_iban())
+# easy_readable string
+print(my_own_iban.get_readable())
+
+# another iban
+another_iban = Iban("ES", "123456789", "12345678")
+print(another_iban.gen_iban())

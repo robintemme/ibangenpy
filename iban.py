@@ -4,7 +4,6 @@ __version__ = "0.1"
 __email__ = "github@n3rdkeller.de"
 __status__ = "Development"
 
-
 # global variables
 COUNTRIES = ("AD", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", \
              "FI", "FR", "GB", "GI", "GR", "HU", "IE", "IS", "IT", "LT", \
@@ -47,10 +46,20 @@ class Iban(object):
                 checksum = "0" + str(abs(checksum))
 
             # assemble the iban
-            my_iban = self.country_code + str(checksum) + bban
-            return my_iban
-        
+            self.my_iban = self.country_code + str(checksum) + bban
+            return self.my_iban
         else:
             print("\nOther countries than 'DE' not yet working.")
             print("Feel free to contribute on GitHub.\n")
+            return "IBAN could not be generated."
 
+    def get_readable(self) -> str:
+        if len(self.my_iban) != 0:
+            return_string = ""
+            for i in range(len(self.my_iban)):
+                if (i % 4 == 0) and (i != 0):
+                    return_string += " "
+                return_string += self.my_iban[i]
+            return return_string
+        else:
+            return "IBAN not generated yet."
