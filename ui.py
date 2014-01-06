@@ -6,7 +6,10 @@ __status__ = "Development"
 
 def mainmenu():
     print("Welcome to our IBAN generator.")
-    print("Please enter your account number:")
+    print("Please enter your country-code:")
+
+def input_country() -> str:
+    pass
 
 def input_account() -> int:
     pass

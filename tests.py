@@ -4,12 +4,9 @@ __version__ = "0.1"
 __email__ = "github@n3rdkeller.de"
 __status__ = "Development"
 
-import ui
-from iban import Iban
-
 def main():
-    while True:
-        ui.mainmenu()
+    pass
+
 
 if __name__ == '__main__':
     main()
