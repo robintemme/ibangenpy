@@ -13,7 +13,7 @@ COUNTRIES = ("AD", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", \
 ##############
 # class IBAN #
 ##############
-class iban(object):
+class Iban(object):
     '''New instance of iban-class'''
 
     def __init__(self, country_code, account_number, routing_number):
@@ -23,7 +23,16 @@ class iban(object):
 
     def gen_iban() -> str:
         if self.country_code == "DE":
-            pass
+            # I know there are many things that are equal here to other
+            # countries. But I decided to only do DE for now.
+            fill_to_ten = 10 - len(self.account_number)
+            bban = str(self.routing_number) + \
+                    (fill_to_ten * "0") + \
+                    str(self.account_number)
+            country_code_ascii = 1314
+            checksum = 0
+            my_iban = self.country_code + str(checksum) + bban
+            return my_iban
         else:
             print("\nOther countries than 'DE' not yet working.")
-            print("Feel free to distribute on GitHub.\n")
+            print("Feel free to contribute on GitHub.\n")
