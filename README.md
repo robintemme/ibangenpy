@@ -1,7 +1,7 @@
 ibangenpy
 =========
 
-Small IBAN generator written in Python 3.
+Small IBAN generator class written in Python 3.
 
-Yet only the class file is working and it's only working for Germany.
+It's only working for Germany yet. Feel free to contribute.
 The usage of the class is shown in 'tests.py'.
